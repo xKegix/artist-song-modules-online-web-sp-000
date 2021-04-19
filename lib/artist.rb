@@ -21,5 +21,5 @@ class Artist
   def with_songs(song)
     @song << song
     song.artist = self
-    
+  end
 end
