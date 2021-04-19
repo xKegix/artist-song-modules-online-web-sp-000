@@ -17,3 +17,5 @@ class Artist
   def self.all
     @@artists
   end
+
+end
