@@ -1,10 +1,11 @@
-attr_accessor :name
-  attr_reader :songs
+require 'pry'
 
-  extend Memorable::ClassMethods
-  include Memorable::InstanceMethods
-  extend Findable
-  include Paramable
+class Artist
+  extend Memorable::ClassMethods, Findable
+  include Paramable, Memorable::InstanceMethods
+
+  attr_accessor :name
+  attr_reader :songs
 
   @@artists = []
 
@@ -16,10 +17,3 @@ attr_accessor :name
   def self.all
     @@artists
   end
-
-  def add_song(song)
-    @songs << song
-    songs.each { |song| add_song(song) }
-  end
-
-end
