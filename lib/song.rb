@@ -1,4 +1,4 @@
-equire 'pry'
+require 'pry'
 
 
 class Song
