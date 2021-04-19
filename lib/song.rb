@@ -1,5 +1,5 @@
 equire 'pry'
-require_relative '../config/environment'
+
 
 class Song
   extend Findable
