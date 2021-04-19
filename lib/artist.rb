@@ -19,9 +19,9 @@ class Artist
   end
 
   def add_song(song)
-    @song << song
+    @songs << song
     song.artist = self
-
-    songs.each {|song| add_song(song)}
+	@@ -36,7 +27,4 @@ def add_songs(songs)
+    songs.each { |song| add_song(song) }
   end
 end
